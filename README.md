@@ -23,11 +23,3 @@ The **Suggest** page is a navbar page with a suggestion form for users to be abl
 
 ## RECENT UPDATES:
 10/16: Added suggest.html and MongoDB for backend database storage after suggestion submitted.
-
-## UPCOMING: 
-### About page:
-mission statement, priorities explained, how we vet information
-### Home page updates:
-imagery, better UI, clear CTAs
-### Business Profile page updates:
-information cards, pop-outs, images, MAP API
