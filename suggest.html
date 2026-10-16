@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Suggest a Business | Good Business</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">
+                <strong>GB</strong> GOOD BUSINESS
+            </a>
+
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="explore.html">Explore</a>
+                <a class="nav-link" href="how-it-works.html">How It Works</a>
+                <a class="nav-link" href="suggest.html">Suggest a Business</a>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container py-5">
+
+        <div class="text-center mb-5">
+            <h1 class="fw-bold">Suggest a Business</h1>
+            <p class="lead">
+                Can't find a business? Suggest one for review.
+            </p>
+        </div>
+
+
+        <!-- Suggestion Form -->
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+
+                <form id="businessForm">
+
+                    <!-- Business Name -->
+                    <div class="mb-3">
+                        <label for="businessName" class="form-label">Business Name</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="businessName"
+                            required
+                            maxlength="150"
+                        >
+                    </div>
+
+                    <!-- Location -->
+                    <div class="mb-3">
+                        <label for="location" class="form-label">Location</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="location"
+                            placeholder="City, State"
+                            required
+                            maxlength="150"
+                        >
+                    </div>
+
+                    <!-- Website -->
+                    <div class="mb-3">
+                        <label for="website" class="form-label">Website</label>
+                        <input
+                            type="url"
+                            class="form-control"
+                            id="website"
+                            placeholder="https://example.com"
+                        >
+                    </div>
+
+                    <!-- Why Suggest -->
+                    <div class="mb-4">
+                        <label for="reason" class="form-label">
+                            Why are you suggesting this business?
+                        </label>
+                        <textarea
+                            class="form-control"
+                            id="reason"
+                            rows="4"
+                            maxlength="2000"
+                        ></textarea>
+                    </div>
+
+                    <!-- Categories -->
+                    <p class="fw-bold">
+                        What information do you know about this business?
+                    </p>
+
+                    <div class="form-check">
+                        <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="sustainability"
+                            name="categories"
+                            value="Sustainability"
+                        >
+                        <label class="form-check-label" for="sustainability">
+                            Sustainability
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="ownership"
+                            name="categories"
+                            value="Local Ownership"
+                        >
+                        <label class="form-check-label" for="ownership">
+                            Local Ownership
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="community"
+                            name="categories"
+                            value="Community Involvement"
+                        >
+                        <label class="form-check-label" for="community">
+                            Community Involvement
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="accessibility"
+                            name="categories"
+                            value="Accessibility"
+                        >
+                        <label class="form-check-label" for="accessibility">
+                            Accessibility
+                        </label>
+                    </div>
+
+                    <div class="form-check mb-5">
+                        <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="civic"
+                            name="categories"
+                            value="Public & Civic Activity"
+                        >
+                        <label class="form-check-label" for="civic">
+                            Public & Civic Activity
+                        </label>
+                    </div>
+
+                    <!-- Submit -->
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                        id="submitBusiness"
+                    >
+                        Submit Business
+                    </button>
+
+                    <!-- Only appears if saving the suggestion fails -->
+                    <div
+                        id="errorMessage"
+                        class="alert alert-danger mt-3 d-none"
+                        role="alert"
+                    >
+                        Your suggestion could not be saved. Please try again.
+                    </div>
+
+                    <p class="text-muted mt-3">
+                        Business suggestions are reviewed before being added to Good Business.
+                    </p>
+
+                </form>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Submission Confirmation Pop-Up -->
+    <div
+        class="modal fade"
+        id="confirmationModal"
+        tabindex="-1"
+        aria-labelledby="confirmationTitle"
+        aria-describedby="confirmationDescription"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-white rounded-3 shadow p-3">
+
+                <div class="modal-body text-center py-4">
+                    <h2 class="h4 fw-bold mb-3" id="confirmationTitle">
+                        Suggestion Received!
+                    </h2>
+
+                    <p id="confirmationDescription">
+                        Thank you for suggesting a business. Your submission
+                        has been received, and verification is in progress.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="btn btn-primary px-4 mt-2"
+                        data-bs-dismiss="modal"
+                    >
+                        Done
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JavaScript -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    <!-- Suggestion Form JavaScript -->
+    <script>
+        // Get the form, error message, submit button, and confirmation pop-up
+        const businessForm = document.getElementById('businessForm');
+        const errorMessage = document.getElementById('errorMessage');
+        const submitButton = document.getElementById('submitBusiness');
+
+        const modalElement = document.getElementById('confirmationModal');
+        const confirmationModal = new bootstrap.Modal(modalElement);
+
+        // Backend API Address
+        const API_URL = 'http://localhost:3000/api/suggestions';
+
+        // Return focus to the form when the confirmation pop-up closes
+        modalElement.addEventListener('hide.bs.modal', function () {
+
+            // Remove focus from the Done button before Bootstrap hides the modal
+            if (modalElement.contains(document.activeElement)) {
+                document.activeElement.blur();
+            }
+
+        });
+
+        modalElement.addEventListener('hidden.bs.modal', function () {
+            // Return keyboard focus to the Submit Business button
+            submitButton.focus();
+        });
+
+        // Run when the user submits the form
+        businessForm.addEventListener('submit', async function (event) {
+            event.preventDefault();
+
+            // Hide any previous error and check required fields
+            errorMessage.classList.add('d-none');
+            if (!businessForm.reportValidity()) return;
+
+            // Collect the information entered by the user
+            const suggestion = {
+                businessName: document.getElementById('businessName').value.trim(),
+                location: document.getElementById('location').value.trim(),
+                website: document.getElementById('website').value.trim(),
+                reason: document.getElementById('reason').value.trim(),
+                categories: Array.from(
+                    document.querySelectorAll('input[name="categories"]:checked'),
+                    checkbox => checkbox.value
+                )
+            };
+
+            // Make sure required text fields are not just spaces
+            if (!suggestion.businessName || !suggestion.location) {
+                errorMessage.textContent = 'Please enter a business name and location.';
+                errorMessage.classList.remove('d-none');
+                return;
+            }
+
+            // Disable the submit button while saving
+            submitButton.disabled = true;
+            submitButton.textContent = 'Submitting...';
+
+            // Send the suggestion to the MongoDB backend
+            try {
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(suggestion)
+                });
+
+                // Check if the backend successfully received the submission
+                if (!response.ok) {
+                    const result = await response.json().catch(() => ({}));
+
+                    throw new Error(
+                        result.message || 'Unable to submit your suggestion.'
+                    );
+                }
+
+                // Clear the form and show confirmation only after saving
+                businessForm.reset();
+                confirmationModal.show();
+
+            } catch (error) {
+                console.error('Unable to save suggestion:', error);
+                errorMessage.textContent = error.message ||
+                    'Your suggestion could not be saved. Please try again.';
+                errorMessage.classList.remove('d-none');
+
+            } finally {
+                // Restore the submit button
+                submitButton.disabled = false;
+                submitButton.textContent = 'Submit Business';
+            }
+
+        });
+    </script>
+    </script>
+</body>
+</html>

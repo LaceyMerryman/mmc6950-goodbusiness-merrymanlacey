@@ -18,11 +18,16 @@ Navigating to this page first will also point users to the Explore page with mat
 ### How It Works
 The **How It Works** page is a navbar page with explanations as to how **Good Business's** user interface works, what the labels mean, and navigate back to the **Find Your Priorities** page.
 
+### Suggest a Business
+The **Suggest** page is a navbar page with a suggestion form for users to be able to suggest a new business that they don't already see on **Good Business**. Users can submit a business, experience a confirmation pop-up, and navigate back to anywhere else in the Good Business site.
+
+## RECENT UPDATES:
+10/16: Added suggest.html and MongoDB for backend database storage after suggestion submitted.
+
 ## UPCOMING: 
 ### About page:
 mission statement, priorities explained, how we vet information
-### Suggest a Business page
 ### Home page updates:
 imagery, better UI, clear CTAs
 ### Business Profile page updates:
-information cards, pop-outs, images, location
+information cards, pop-outs, images, MAP API
