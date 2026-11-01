@@ -72,11 +72,11 @@ const Suggestion = mongoose.models.Suggestion ||
 
 // Allowed Categories
 const allowedCategories = [
-    'Sustainability',
-    'Local Ownership',
-    'Community Involvement',
-    'Accessibility',
-    'Public & Civic Activity'
+    'sustainability',
+    'ownership',
+    'community',
+    'accessibility',
+    'civic'
 ];
 
 // Handle Business Submissions
