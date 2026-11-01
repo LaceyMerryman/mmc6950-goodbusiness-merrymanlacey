@@ -5,48 +5,305 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Good Business</title>
+    <title>Good Business | Home</title>
 
     <!-- Bootstrap CSS -->
-    <link 
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         rel="stylesheet"
     >
 
+    <!-- Good Business Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-
     <!-- Navigation -->
-     <nav class="navbar navbar-expand-lg bg-light">
-      <div class="container">
-          <a class="navbar-brand" href="index.html">
-            <strong>GB</strong> GOOD BUSINESS</a>
+    <nav
+        class="navbar navbar-expand-lg gb-navbar"
+        aria-label="Main navigation"
+    >
+        <div class="container">
 
-          <div class="navbar-nav ms-auto">
-              <a class="nav-link" href="explore.html">Explore</a>
-              <a class="nav-link" href="how-it-works.html">How It Works</a>
-              <a class="nav-link" href="suggest.html">Suggest a Business</a>
-          </div>
-      </div>
+            <!-- Brand Logo -->
+            <a class="navbar-brand" href="index.html">
+                <img
+                    src="images/gb_mainlogo_white.png"
+                    alt="Good Business home"
+                    width="43"
+                    height="43"
+                    class="brand-logo">
+            </a>
+
+            <!-- Mobile Navigation Toggle -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#gbNavigation"
+                aria-controls="gbNavigation"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <div
+                class="collapse navbar-collapse"
+                id="gbNavigation">
+
+                <div class="navbar-nav ms-auto">
+                    <a
+                        class="nav-link active"
+                        href="index.html"
+                        aria-current="page">
+                        Home
+                    </a>
+
+                    <a class="nav-link" href="explore.html">
+                        Explore</a>
+
+                    <a class="nav-link" href="how-it-works.html">
+                        How It Works</a>
+
+                    <a class="nav-link" href="suggest.html">
+                        Suggest</a>
+                </div>
+            </div>
+        </div>
     </nav>
-    
-    <!-- Main Content -->
-<div class="container py-5">
-  <div class="text-center py-5">
-    <h1 class="display-3 fw-bold">Know where your money goes.</h1>
 
-      <p class="lead mt-4"> Discover businesses that align with what matters to you.</p>
+    <main>
+        <!-- Hero Section -->
+        <section class="home-hero">
+            <div class="container">
 
-      <a href="priorities.html" class="btn btn-primary btn-lg mt-3">Find Your Priorities</a>
-  </div>
-</div>
+                <h1>
+                    BETTER<br>
+                    BUSINESS.<br>
+                    BETTER<br>
+                    WORLD.
+                </h1>
+            </div>
+        </section>
+
+        <!-- Intro Section -->
+        <section class="section-padding">
+            <div class="container intro-copy">
+
+                <span class="eyebrow">
+                    A BETTER WAY TO DISCOVER
+                </span>
+
+                <h2>
+                    Good Business Starts With
+                    What Matters to You.
+                </h2>
+
+                <div class="accent-line ms-0"></div>
+
+                <p>
+                    Discover businesses that reflect your
+                    priorities. From sustainability and local
+                    ownership to accessibility and community
+                    involvement, Good Business brings business
+                    values and practices together in one
+                    easy-to-explore place.
+                </p>
+
+                <p class="fw-semibold">
+                    Less time researching. More confidence
+                    in where your money goes.
+                </p>
+
+                <a
+                    class="gb-btn"
+                    href="explore.html">
+                    FIND A GOOD BUSINESS
+                    <span aria-hidden="true">→</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Priorities Section -->
+        <section class="section-blue section-padding">
+
+            <div class="container">
+
+                <h2 class="text-center">
+                    Explore What Matters to You
+                </h2>
+
+                <div class="accent-line"></div>
+
+                <div class="row g-3 mt-3">
+
+                    <!-- Sustainability -->
+                    <div class="col-6 col-lg-3">
+                        <article class="priority-tile">
+
+                            <div class="priority-illustration">
+                                <img
+                                    src="images/sustainability.jpg"
+                                    alt="Hands holding a young green plant"
+                                    loading="lazy">
+                            </div>
+
+                            <h3>Sustainability</h3>
+
+                            <p>
+                                Environmental practices and
+                                responsible resource use.
+                            </p>
+                        </article>
+                    </div>
+
+                    <!-- Community Involvement -->
+                    <div class="col-6 col-lg-3">
+
+                        <article class="priority-tile">
+
+                            <div class="priority-illustration">
+                                <img
+                                    src="images/community.jpg"
+                                    alt="Volunteers participating in a community project"
+                                    loading="lazy">
+                            </div>
+
+                            <h3>Community</h3>
+
+                            <p>
+                                Local partnerships, volunteering,
+                                and giving back.
+                            </p>
+                        </article>
+                    </div>
+
+
+                    <!-- Local Ownership -->
+                    <div class="col-6 col-lg-3">
+
+                        <article class="priority-tile">
+
+                            <div class="priority-illustration">
+                                <img
+                                    src="images/local-ownership.jpg"
+                                    alt="Independent business owner in a local shop"
+                                    loading="lazy">
+                            </div>
+
+                            <h3>Local Ownership</h3>
+
+                            <p>
+                                Discover independently and
+                                locally owned businesses.
+                            </p>
+                        </article>
+                    </div>
+
+
+                    <!-- Accessibility -->
+                    <div class="col-6 col-lg-3">
+
+                        <article class="priority-tile">
+
+                            <div class="priority-illustration">
+                                <img
+                                    src="images/accessibility.jpg"
+                                    alt="Accessible entrance to a local business"
+                                    loading="lazy">
+                            </div>
+
+                            <h3>Accessibility</h3>
+
+                            <p>
+                                Learn about inclusive and
+                                accessible experiences.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Closing CTA -->
+        <section class="section-padding text-center">
+            <div class="container section-intro">
+
+                <h2>
+                    What Makes a Business Good?<br>
+                    You Decide.
+                </h2>
+
+                <div class="accent-line"></div>
+
+                <p>
+                    There is no single definition of a good
+                    business.<br>
+                    Explore the information available
+                    and decide what matters most to you.
+                </p>
+
+                <div
+                    class="d-flex flex-column flex-sm-row
+                           gap-3 justify-content-center">
+
+                    <a
+                        class="gb-btn"
+                        href="how-it-works.html">
+                        LEARN HOW IT WORKS
+                        <span aria-hidden="true">→</span>
+                    </a>
+
+                    <a
+                        class="gb-btn"
+                        href="suggest.html">
+                        SUGGEST A GOOD BUSINESS
+                        <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="gb-footer">
+
+        <div
+            class="container d-flex flex-column flex-md-row
+                   justify-content-between align-items-center
+                   gap-3">
+
+            <small>
+                © Good Business · A student prototype
+            </small>
+
+            <img
+                src="images/brandmark_white.png"
+                width="36"
+                height="36"
+                class="brand-logo"
+                alt="">
+
+            <div>
+                <a href="how-it-works.html">
+                    How It Works
+                </a>
+
+                <span aria-hidden="true"> · </span>
+
+                <a href="suggest.html">
+                    Suggest a Business
+                </a>
+            </div>
+        </div>
+    </footer>
 
     <!-- Bootstrap JavaScript -->
-    <script 
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-    </script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    ></script>
 
 </body>
-
 </html>

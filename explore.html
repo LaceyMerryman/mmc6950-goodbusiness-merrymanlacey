@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,168 +6,465 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Explore Businesses | Good Business</title>
+    <title>Good Business | Explore</title>
 
     <!-- Bootstrap CSS -->
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         rel="stylesheet"
     >
+
+    <!-- Good Business Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
     <!-- Navigation -->
-     <nav class="navbar navbar-expand-lg bg-light">
+    <nav
+        class="navbar navbar-expand-lg gb-navbar"
+        aria-label="Main navigation"
+    >
         <div class="container">
 
+            <!-- Brand Logo -->
             <a class="navbar-brand" href="index.html">
-                <strong>GB</strong> GOOD BUSINESS
+                <img
+                    src="images/gb_mainlogo_white.png"
+                    alt="Good Business home"
+                    width="43"
+                    height="43"
+                    class="brand-logo">
             </a>
 
-            <div class="navbar-nav ms-auto">
-                <a class="nav-link" href="explore.html">Explore</a>
-                <a class="nav-link" href="how-it-works.html">How It Works</a>
-                <a class="nav-link" href="suggest.html">Suggest a Business</a>
-            </div>
+            <!-- Mobile Navigation Toggle -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#gbNavigation"
+                aria-controls="gbNavigation"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
+            <!-- Navigation Links -->
+            <div
+                class="collapse navbar-collapse"
+                id="gbNavigation">
+
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="index.html">
+                        Home
+                    </a>
+
+                    <a
+                        class="nav-link active"
+                        href="explore.html"
+                        aria-current="page">
+                        Explore
+                    </a>
+
+                    <a class="nav-link" href="how-it-works.html">
+                        How It Works
+                    </a>
+
+                    <a class="nav-link" href="suggest.html">
+                        Suggest
+                    </a>
+                </div>
+            </div>
         </div>
     </nav>
 
-    <!-- Business Directory -->
-     <div class="container py-5">
+    <main>
+        <!-- Explore Introduction -->
+        <section class="explore-section">
+            <div class="container">
 
-        <div class="mb-5">
-            <h1 class="fw-bold">Expore Businesses</h1>
+                <div class="explore-intro">
 
-            <p class="lead">
-                Discover businesses based on what matters to you.</p>
+                    <span class="eyebrow">
+                        EXPLORE MORE GOOD BUSINESSES
+                    </span>
+
+                    <h1>
+                        Discover Businesses Based on
+                        What Matters to You.
+                    </h1>
+
+                    <div class="accent-line ms-0"></div>
+
+                    <p>
+                        Explore businesses and learn more about
+                        their practices, priorities, and
+                        available information.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Priority Filters -->
+        <section class="explore-filters">
+            <div class="container">
+
+                <h2>
+                    What Matters to You?
+                </h2>
+
+                <p>
+                    Select the priorities you care about to find
+                    businesses that align with your values.
+                </p>
+
+                <div class="priority-options">
+
+                    <!-- Sustainability -->
+                    <label>
+                        <input
+                            type="checkbox"
+                            value="sustainability">
+                        Sustainability
+                    </label>
+
+                    <!-- Local Ownership -->
+                    <label>
+                        <input
+                            type="checkbox"
+                            value="ownership">
+                        Local Ownership
+                    </label>
+
+                    <!-- Community -->
+                    <label>
+                        <input
+                            type="checkbox"
+                            value="community">
+                        Community Involvement
+                    </label>
+
+                    <!-- Accessibility -->
+                    <label>
+                        <input
+                            type="checkbox"
+                            value="accessibility">
+                        Accessibility
+                    </label>
+
+                    <!-- Civic Activity -->
+                    <label>
+                        <input
+                            type="checkbox"
+                            value="civic">
+                        Public & Civic Activity
+                    </label>
+                </div>
+
+                <!-- Clear Filters -->
+                <button
+                    type="button"
+                    id="clearFilters">
+                    Clear Filters
+                </button>
+
+                <!-- No Results Message -->
+                <p
+                    id="noResults"
+                    class="d-none mt-3"
+                    role="status">
+                    No businesses match your selected priorities.
+                </p>
+            </div>
+        </section>
+
+        <!-- Business Directory -->
+        <section class="section-padding">
+            <div class="container">
+
+                <div class="row g-4" id="businessResults">
+
+                    <!-- Lighthouse Cafe -->
+                    <div
+                        class="col-12 col-md-6 col-lg-4 business-result"
+                        data-priorities="sustainability,ownership,community">
+
+                        <article
+                            class="card business-card gb-card h-100">
+
+                            <div class="card-body">
+
+                                <h2 class="card-title">
+                                    Lighthouse Cafe
+                                </h2>
+
+                                <p class="business-category">
+                                    COFFEE SHOP
+                                </p>
+
+                                <p class="business-location">
+                                    MYSTIC, CT
+                                </p>
+
+                                <p class="business-description">
+                                    Locally owned coffee shop
+                                    focused on responsible
+                                    sourcing and community
+                                    partnerships.
+                                </p>
+
+                                <div class="business-tags">
+
+                                    <span
+                                        class="business-tag tag-sustainability">
+                                        Sustainability
+                                    </span>
+
+                                    <span
+                                        class="business-tag tag-ownership">
+                                        Local Ownership
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="card-footer">
+                                <a
+                                    href="businesses/lighthouse-cafe.html"
+                                    class="gb-btn">
+                                    VIEW BUSINESS
+                                    <span aria-hidden="true">→</span>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Outer Light Coffee -->
+                    <div
+                        class="col-12 col-md-6 col-lg-4 business-result"
+                        data-priorities="ownership,community">
+
+                        <article
+                            class="card business-card gb-card h-100">
+
+                            <div class="card-body">
+
+                                <h2 class="card-title">
+                                    Outer Light Coffee
+                                </h2>
+
+                                <p class="business-category">
+                                    COFFEE SHOP & BREWERY
+                                </p>
+
+                                <p class="business-location">
+                                    GROTON, CT
+                                </p>
+
+                                <p class="business-description">
+                                    Neighborhood coffee shop
+                                    by day and brewery by night
+                                    featuring rotating specials
+                                    and beers on tap.
+                                </p>
+
+                                <div class="business-tags">
+
+                                    <span
+                                        class="business-tag tag-ownership">
+                                        Local Ownership
+                                    </span>
+
+                                    <span
+                                        class="business-tag tag-community">
+                                        Community
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="card-footer">
+                                <a
+                                    href="businesses/outer-light-coffee.html"
+                                    class="gb-btn">
+                                    VIEW BUSINESS
+                                    <span aria-hidden="true">→</span>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Alice in the Village -->
+                    <div
+                        class="col-12 col-md-6 col-lg-4 business-result"
+                        data-priorities="ownership,accessibility">
+
+                        <article
+                            class="card business-card gb-card h-100">
+
+                            <div class="card-body">
+
+                                <h2 class="card-title">
+                                    Alice in the Village
+                                </h2>
+
+                                <p class="business-category">
+                                    TEA SHOP & BAKERY
+                                </p>
+
+                                <p class="business-location">
+                                    MYSTIC, CT
+                                </p>
+
+                                <p class="business-description">
+                                    A local tea shop in Mystic,
+                                    CT offering small bites and
+                                    house-made teas for travelers
+                                    and guests of the community.
+                                </p>
+
+                                <div class="business-tags">
+
+                                    <span
+                                        class="business-tag tag-ownership">
+                                        Local Ownership
+                                    </span>
+
+                                    <span
+                                        class="business-tag tag-accessibility">
+                                        Accessibility
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="card-footer">
+                                <a
+                                    href="businesses/alice-in-the-village.html"
+                                    class="gb-btn">
+                                    VIEW BUSINESS
+                                    <span aria-hidden="true">→</span>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Closing CTA -->
+        <section class="section-light section-padding">
+            <div class="container section-intro">
+
+                <h2>
+                    Know a Business Worth Exploring?
+                </h2>
+
+                <div class="accent-line"></div>
+
+                <p>
+                    Help grow Good Business by suggesting
+                    a business for review. Your contribution
+                    could help others discover more about
+                    the places they choose to support.
+                </p>
+
+                <a href="suggest.html" class="gb-btn">
+                    SUGGEST A BUSINESS
+                    <span aria-hidden="true">→</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="gb-footer">
+
+        <div
+            class="container d-flex flex-column flex-md-row
+                   justify-content-between align-items-center
+                   gap-3">
+
+            <small>
+                © Good Business · A student prototype
+            </small>
+
+            <img
+                src="images/brandmark_white.png"
+                width="36"
+                height="36"
+                class="brand-logo"
+                alt="">
+
+            <div>
+                <a href="how-it-works.html">
+                    How It Works
+                </a>
+
+                <span aria-hidden="true"> · </span>
+
+                <a href="suggest.html">
+                    Suggest a Business
+                </a>
+            </div>
         </div>
+    </footer>
 
-
-        <div id="selectedPriorities" class="mb-4"></div>
-
-        <div class="row g-4">
-            <!-- Business 1 -->
-             <div class="col-md-4">
-                <div
-                    class="card h-100 business-card"
-                    data-priorities="sustainability,ownership">
-                    <div class="card-body">
-                        <h2 class="card-title h4">Lighthouse Cafe</h2>
-                        <p class="text-muted">Coffee Shop</p>
-                        <p class="match-count fw-bold"></p>
-                        <p>Locally owned coffee shop focused on responsible sourcing and community partnerships.</p>
-
-                        <span class="badge text-bg-success">
-                            Sustainability
-                        </span>
-                        <span class="badge text-bg-secondary">
-                            Local Ownership
-                        </span>
-                    </div>
-
-                    <div class="card-footer bg-white border-0">
-                        <a href="business.html" class="btn btn-outline-primary">View Business</a>
-                    </div>
-                </div>
-             </div>
-            
-            <!-- Business 2 -->
-             <div class="col-md-4">
-                <div
-                    class="card h-100 business-card"
-                    data-priorities="ownership,community">
-                    <div class="card-body">
-                        <h2 class="card-title h4">Outer Light Coffee</h2>
-                        <p class="text-muted">Coffee Shop & Brewery</p>
-                        <p class="match-count fw-bold"></p>
-                        <p>Neighborhood coffee shop by day and brewery by night featuring rotating specials and beers on tap.</p>
-
-                        <span class="badge text-bg-success">
-                            Local Ownership
-                        </span>
-                        <span class="badge text-bg-secondary">
-                            Community
-                        </span>
-                    </div>
-
-                    <div class="card-footer bg-white border-0">
-                        <a href="#" class="btn btn-outline-primary">View Business</a>
-                    </div>
-                </div>
-             </div>
-
-             <!-- Business 3 -->
-             <div class="col-md-4">
-                <div
-                    class="card h-100 business-card"
-                    data-priorities="ownership,accessibility">
-                    <div class="card-body">
-                        <h2 class="card-title h4">Alice in the Village</h2>
-                        <p class="text-muted">Tea Shop & Bakery</p>
-                        <p class="match-count fw-bold"></p>
-                        <p>A local tea shop in Mystic, CT offering small bites and house-made teas for travelers and guests of the community.</p>
-
-                        <span class="badge text-bg-success">
-                            Local Ownership
-                        </span>
-                        <span class="badge text-bg-secondary">
-                            Accessibility
-                        </span>
-                    </div>
-
-                    <div class="card-footer bg-white border-0">
-                        <a href="#" class="btn btn-outline-primary">View Business</a>
-                    </div>
-                </div>
-             </div>
-        </div>
-     </div>
-
-     <!-- Bootstrap JS -->
+    <!-- Bootstrap JavaScript -->
     <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-    </script>
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    ></script>
 
+    <!-- Business Filtering JavaScript -->
     <script>
+        const filters = document.querySelectorAll(
+            ".priority-options input"
+        );
 
-    const storedPriorities = localStorage.getItem("priorities");
-    const selectedPrioritiesDiv =
-        document.getElementById("selectedPriorities");
+        const businesses = document.querySelectorAll(
+            ".business-result"
+        );
 
-    if (storedPriorities) {
+        function filterBusinesses() {
 
-        const priorities = JSON.parse(storedPriorities);
+            const selected = Array.from(filters)
+                .filter(input => input.checked)
+                .map(input => input.value);
 
-        priorities.forEach(function(priority) {
-            const badge = document.createElement("span");
-            badge.className = "badge text-bg-primary me-2";
-            badge.textContent = priority.charAt(0).toUpperCase() + priority.slice(1);
-            selectedPrioritiesDiv.appendChild(badge);
+            let visibleCount = 0;
+
+            businesses.forEach(business => {
+
+                const priorities =
+                    business.dataset.priorities.split(",");
+
+                const matches = selected.length === 0 ||
+                    selected.some(priority =>
+                        priorities.includes(priority)
+                    );
+
+                business.classList.toggle("d-none", !matches);
+
+                if (matches) {
+                    visibleCount++;
+                }
+            });
+
+            document.getElementById("noResults").classList.toggle(
+                "d-none",
+                visibleCount > 0
+            );
+        }
+
+        // Update results when filters change
+        filters.forEach(input => {
+            input.addEventListener("change", filterBusinesses);
         });
 
-    const businessCards = document.querySelectorAll(".business-card");
-
-    businessCards.forEach(function(card) {
-        const businessPriorities =
-        card.dataset.priorities.split(",");
-
-        let matchCount = 0;
-
-        priorities.forEach(function(priority) {
-            if (businessPriorities.includes(priority)) {
-            matchCount++;
+        // Clear all selected filters
+        document.getElementById("clearFilters").addEventListener(
+            "click",
+            () => {
+                filters.forEach(input => input.checked = false);
+                filterBusinesses();
             }
-    });
-
-    const matchText = card.querySelector(".match-count");
-
-    matchText.textContent =
-        "Matches " + matchCount + " of your " +
-        priorities.length + " priorities";
-    });
-    
-}
+        );
     </script>
 
 </body>

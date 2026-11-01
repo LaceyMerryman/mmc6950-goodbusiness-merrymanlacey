@@ -5,157 +5,383 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>How It Works | Good Business</title>
+    <title>Good Business | How It Works</title>
 
     <!-- Bootstrap CSS -->
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         rel="stylesheet"
     >
+
+    <!-- Good Business Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav
+        class="navbar navbar-expand-lg gb-navbar"
+        aria-label="Main navigation"
+    >
         <div class="container">
 
+            <!-- Brand Logo -->
             <a class="navbar-brand" href="index.html">
-                <strong>GB</strong> GOOD BUSINESS
+                <img
+                    src="images/gb_mainlogo_white.png"
+                    alt="Good Business home"
+                    width="43"
+                    height="43"
+                    class="brand-logo">
             </a>
 
-            <div class="navbar-nav ms-auto">
-                <a class="nav-link" href="explore.html">Explore</a>
-                <a class="nav-link" href="how-it-works.html">How It Works</a>
-                <a class="nav-link" href="suggest.html">Suggest a Business</a>
-            </div>
+            <!-- Mobile Navigation Toggle -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#gbNavigation"
+                aria-controls="gbNavigation"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
+            <!-- Navigation Links -->
+            <div
+                class="collapse navbar-collapse"
+                id="gbNavigation">
+
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="index.html">
+                        Home</a>
+
+                    <a class="nav-link" href="explore.html">
+                        Explore</a>
+
+                    <a
+                        class="nav-link active"
+                        href="how-it-works.html"
+                        aria-current="page">
+                        How It Works
+                    </a>
+
+                    <a class="nav-link" href="suggest.html">
+                        Suggest</a>
+                </div>
+            </div>
         </div>
     </nav>
 
+    <main>
+        <!-- Page Introduction -->
+        <section class="page-banner">
+            <div class="container text-center">
 
-    <!-- Main Content -->
-    <div class="container py-5">
-        <div class="text-center mb-5">
-            <h1 class="fw-bold">
-                How Good Business Works
-            </h1>
-            <p class="lead">
-                We show where business information comes from so you can decide what matters to you.
-            </p>
-        </div>
+                <span class="eyebrow">
+                    SIMPLE. TRANSPARENT. PERSONALIZED.
+                </span>
 
+                <h1 class="mt-3">
+                    How Good Business Works
+                </h1>
 
-        <!-- Steps -->
-        <div class="row g-4 mb-5">
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h2 class="h4">
-                            1. Choose Your Priorities
-                        </h2>
-                        <p>
-                            Select the business values that matter most to you, such as sustainability,
-                            ownership, community involvement, and accessibility.
-                        </p>
+                <div class="accent-line"></div>
+
+                <p>
+                    Good Business helps you discover businesses
+                    based on the values and practices that
+                    matter most to you.
+                </p>
+            </div>
+        </section>
+
+        <!-- Three-Step Process -->
+        <section class="section-padding">
+            <div class="container">
+
+                <div class="section-intro mb-5">
+                    <h2>
+                        Finding a Good Business
+                        Starts With You.
+                    </h2>
+
+                    <div class="accent-line"></div>
+
+                    <p>
+                        Explore businesses in three simple steps.
+                        You decide which priorities matter most,
+                        and we'll help you find businesses
+                        that reflect them.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+
+                    <!-- Step 1 -->
+                    <div class="col-12 col-md-4">
+                        <article class="gb-step-card green">
+
+                            <span class="gb-step-number">
+                                01
+                            </span>
+
+                            <h3 class="h4">
+                                Choose Your Priorities
+                            </h3>
+
+                            <p>
+                                Select the business practices
+                                and values that are important
+                                to you, such as sustainability,
+                                local ownership, accessibility,
+                                or community involvement.
+                            </p>
+                        </article>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="col-12 col-md-4">
+                        <article class="gb-step-card yellow">
+
+                            <span class="gb-step-number">
+                                02
+                            </span>
+
+                            <h3 class="h4">
+                                Explore Businesses
+                            </h3>
+
+                            <p>
+                                Browse businesses and see
+                                which of your selected
+                                priorities align with the
+                                information available about
+                                each business.
+                            </p>
+                        </article>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="col-12 col-md-4">
+                        <article class="gb-step-card orange">
+
+                            <span class="gb-step-number">
+                                03
+                            </span>
+
+                            <h3 class="h4">
+                                Make Informed Choices
+                            </h3>
+
+                            <p>
+                                Review business details,
+                                explore supporting information,
+                                and decide which businesses
+                                you want to support.
+                            </p>
+                        </article>
                     </div>
                 </div>
-            </div>
 
-
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h2 class="h4">
-                            2. Explore Businesses
-                        </h2>
-                        <p>
-                            Browse businesses and compare information based on the priorities you selected.
-                        </p>
-                    </div>
+                <div class="text-center mt-5">
+                    <a href="explore.html" class="gb-btn">
+                        GET STARTED
+                        <span aria-hidden="true">→</span>
+                    </a>
                 </div>
             </div>
+        </section>
 
+        <!-- Transparency Section -->
+        <section class="section-blue section-padding">
+            <div class="container">
 
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h2 class="h4">
-                            3. Check the Source
-                        </h2>
-                        <p>
-                            See where each claim came from and whether the information has been verified,
-                            reported by the business, or is currently unknown.
-                        </p>
+                <div class="section-intro mb-5">
+                    <h2>
+                        Transparency Matters.
+                    </h2>
+
+                    <div class="accent-line"></div>
+
+                    <p>
+                        Not all business information comes
+                        from the same source. Good Business
+                        uses clear labels to help you
+                        understand where information comes
+                        from and what has been confirmed.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+
+                    <!-- Verified -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <article class="label-card">
+
+                            <span class="source-label source-verified">
+                                Verified
+                            </span>
+
+                            <h3 class="h5 mt-3">
+                                Verified Information
+                            </h3>
+
+                            <p>
+                                Information reviewed and
+                                confirmed through an
+                                available supporting source.
+                            </p>
+                        </article>
+                    </div>
+
+                    <!-- Business Reported -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <article class="label-card">
+
+                            <span class="source-label source-reported">
+                                Business Reported
+                            </span>
+
+                            <h3 class="h5 mt-3">
+                                Business-Provided Information
+                            </h3>
+
+                            <p>
+                                Information shared directly
+                                by a business that has not
+                                yet been independently
+                                confirmed.
+                            </p>
+                        </article>
+                    </div>
+
+                    <!-- Third-Party Resource -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <article class="label-card">
+
+                            <span class="source-label source-third-party">
+                                Third-Party Resource
+                            </span>
+
+                            <h3 class="h5 mt-3">
+                                External Information
+                            </h3>
+
+                            <p>
+                                Information linked to
+                                external resources for
+                                additional context
+                                and research.
+                            </p>
+                        </article>
+                    </div>
+
+                    <!-- Unavailable -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <article class="label-card">
+
+                            <span class="source-label source-unavailable">
+                                Unavailable
+                            </span>
+
+                            <h3 class="h5 mt-3">
+                                Information Not Available
+                            </h3>
+
+                            <p>
+                                Information that is not
+                                currently available or
+                                has not been provided.
+                            </p>
+                        </article>
                     </div>
                 </div>
+
+                <p class="transparency-note text-center mt-4">
+                    A missing label or unavailable information
+                    does not necessarily reflect a business's
+                    practices or values.
+                </p>
+            </div>
+        </section>
+
+        <!-- Closing CTA -->
+        <section class="section-padding text-center">
+            <div class="container section-intro">
+
+                <h2>
+                    Ready to Discover Your
+                    Kind of Good Business?
+                </h2>
+
+                <div class="accent-line"></div>
+
+                <p>
+                    Start by selecting what matters most
+                    to you, or help grow our directory
+                    by suggesting a business.
+                </p>
+
+                <div
+                    class="d-flex flex-column flex-sm-row
+                           gap-3 justify-content-center">
+
+                    <a
+                        href="priorities.html"
+                        class="gb-btn">
+                        FIND A GOOD BUSINESS
+                        <span aria-hidden="true">→</span>
+                    </a>
+
+                    <a
+                        href="suggest.html"
+                        class="gb-btn">
+                        SUGGEST A BUSINESS
+                        <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="gb-footer">
+
+        <div
+            class="container d-flex flex-column flex-md-row
+                   justify-content-between align-items-center
+                   gap-3">
+
+            <small>
+                © Good Business · A student prototype
+            </small>
+
+            <img
+                src="images/brandmark_white.png"
+                width="36"
+                height="36"
+                class="brand-logo"
+                alt="">
+
+            <div>
+                <a href="how-it-works.html">
+                    How It Works
+                </a>
+
+                <span aria-hidden="true"> · </span>
+
+                <a href="suggest.html">
+                    Suggest a Business
+                </a>
             </div>
         </div>
-
-
-        <!-- Trust Labels -->
-        <div class="mb-5">
-
-            <h2 class="mb-4">
-                What do the labels mean?
-            </h2>
-
-            <div class="mb-4">
-                <span class="badge text-bg-success">
-                    Verified
-                </span>
-
-                <p class="mt-2">
-                    Information confirmed through an independent or publicly available source.
-                </p>
-            </div>
-
-
-            <div class="mb-4">
-                <span class="badge text-bg-primary">
-                    Business Reported
-                </span>
-
-                <p class="mt-2">
-                    Information provided or published directly by the business.
-                </p>
-            </div>
-
-            <div class="mb-4">
-                <span class="badge text-bg-warning">
-                    Third-Party Resource
-                </span>
-
-                <p class="mt-2">
-                    Information provided or published from a third-party source that has not been fully verified.
-                </p>
-            </div>
-
-            <div class="mb-4">
-                <span class="badge text-bg-secondary">
-                    Unavailable
-                </span>
-
-                <p class="mt-2">
-                    Reliable information is not currently available.
-                </p>
-            </div>
-        </div>
-
-
-        <!-- Call to Action -->
-        <div class="text-center">
-            <a href="priorities.html" class="btn btn-primary">
-                Find Your Priorities
-            </a>
-        </div>
-    </div>
-
+    </footer>
 
     <!-- Bootstrap JavaScript -->
     <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-    </script>
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    ></script>
 
 </body>
 </html>
